@@ -120,7 +120,7 @@ function App() {
 					</Marker>
 				))}
 			</MapContainer>
-			<div style={{backgroundColor: 'white', position: 'absolute', left: 0, bottom: 0, width: '300px', zIndex: 500, borderTopRightRadius: '0.5rem'}} className="station-list-container">
+			<div style={{backgroundColor: 'white', position: 'absolute', left: 0, bottom: 0, zIndex: 2000}} className="station-list-container">
 				<div style={{padding: '0.75rem', display: 'flex', alignItems: 'center', gap: '2rem'}}>
 					<p style={{fontWeight: 500, margin: 0}}>Stöðvalisti</p>
 					<div style={{display: 'flex', flexGrow: 1, justifyContent: 'flex-end', alignItems: 'center', textAlign: 'right'}}>

@@ -1,5 +1,9 @@
+html,body,#root {
+	height: 100%;
+}
+
 .App {
-	height: 100vh;
+	height: 100%;
 	position: relative;
 	overflow-y: hidden;
 }
@@ -23,10 +27,19 @@
 }
 
 .station-list-container {
-	transform: translateY(90%);
+	transform: translateY(90.5%);
 	transition: transform 250ms;
+	width: 300px;
+	border-top-right-radius: 0.5rem;
 }
 
 .station-list-container:hover {
 	transform: translateY(0%);
+}
+
+@media only screen and (max-width: 768px) {
+	.station-list-container {
+		width: 100%;
+		border-top-right-radius: 0;
+	}
 }
