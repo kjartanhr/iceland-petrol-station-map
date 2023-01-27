@@ -88,14 +88,18 @@ function App() {
 
 	return (
 		<div className="App">
-			<div style={{position: 'fixed', top: 0, left: '50%', transform: 'translateX(-50%)', zIndex: 500, display: 'flex', alignItems: 'center', gap: '0.75rem', padding: '1rem', backgroundColor: 'rgba(255, 255, 255, 0.7)', borderBottomLeftRadius: '0.5rem', WebkitBorderBottomRightRadius: '0.5rem', backdropFilter: 'blur(3px)'}}>
-				<img src="dispenser.png" style={{height: 35}} />
-				<h1 style={{margin: 0, fontSize: '1.75rem'}}>Bensínstöðvarvefsjá</h1>
+			<div style={{position: 'fixed', top: 0, left: '50%', transform: 'translateX(-50%)', zIndex: 500, padding: '1rem', backgroundColor: 'rgba(255, 255, 255, 0.7)', borderBottomLeftRadius: '0.5rem', WebkitBorderBottomRightRadius: '0.5rem', backdropFilter: 'blur(3px)'}}>
+				<div style={{display: 'flex', alignItems: 'center', gap: '0.75rem'}}>
+					<img src="dispenser.png" style={{height: 35}} />
+					<h1 style={{margin: 0, fontSize: '1.75rem'}}>Bensínstöðvarvefsjá</h1>
+				</div>
+				<div style={{textAlign: 'center'}}>
+					<p style={{margin: 0, marginTop: 10, fontSize: '0.85rem', opacity: 0.65}}>&copy; {new Date().getFullYear()} <a style={{textDecoration: 'underline', color: 'inherit'}} href="https://kjartan.io/" target="_blank" rel="noreferrer">Kjartan Hrafnkelsson</a></p>
+				</div>
 			</div>
 			<MapContainer center={[64.81942, -18.53717]} zoom={6.5} scrollWheelZoom={true} ref={setMap}>
 				<TileLayer
 					attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-					//url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 					url="https://stamen-tiles-{s}.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.{ext}"
 					subdomains="abcd"
 					minZoom={1}
@@ -122,7 +126,7 @@ function App() {
 			</MapContainer>
 			<div style={{backgroundColor: 'white', position: 'absolute', left: 0, bottom: 0, zIndex: 2000}} className="station-list-container">
 				<div style={{padding: '0.75rem', display: 'flex', alignItems: 'center', gap: '2rem'}}>
-					<p style={{fontWeight: 500, margin: 0}}>Stöðvalisti</p>
+					<p style={{fontWeight: 500, margin: 0}}>Verðlisti</p>
 					<div style={{display: 'flex', flexGrow: 1, justifyContent: 'flex-end', alignItems: 'center', textAlign: 'right'}}>
 						<select style={{border: 'none'}} onChange={(e) => setSortOrder(e.target.value)}>
 							<option value="95-lowest-first">Bensín (95) &mdash; ódýrt fyrst</option>
