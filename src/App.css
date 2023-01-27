@@ -1,9 +1,32 @@
 .App {
 	height: 100vh;
 	position: relative;
+	overflow-y: hidden;
 }
 
 .leaflet-container {
 	height: 100%;
 	width: 100%;
+}
+
+.station-button {
+	margin: 0;
+	text-align: left;
+	border: none;
+	background: none;
+	padding: 0.75rem;
+	cursor: pointer;
+}
+
+.station-button:hover {
+	background-color: #f1f5f9;
+}
+
+.station-list-container {
+	transform: translateY(90%);
+	transition: transform 250ms;
+}
+
+.station-list-container:hover {
+	transform: translateY(0%);
 }
