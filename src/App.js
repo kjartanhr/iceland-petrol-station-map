@@ -94,7 +94,7 @@ function App() {
 					<h1 style={{margin: 0, fontSize: '1.75rem'}}>Bensínstöðvarvefsjá</h1>
 				</div>
 				<div style={{textAlign: 'center'}}>
-					<p style={{margin: 0, marginTop: 10, fontSize: '0.85rem', opacity: 0.65}}>&copy; {new Date().getFullYear()} <a style={{textDecoration: 'underline', color: 'inherit'}} href="https://kjartan.io/" target="_blank" rel="noreferrer">Kjartan Hrafnkelsson</a></p>
+					<p style={{margin: 0, marginTop: 10, fontSize: '0.85rem', opacity: 0.65}}>&copy; {new Date().getFullYear()} <a style={{textDecoration: 'underline', color: 'inherit'}} href="https://kjartan.io/" target="_blank" rel="noreferrer">Kjartan Hrafnkelsson</a> &bull; Hýst af <a style={{textDecoration: 'underline', color: 'inherit'}} href="https://northlayer.is/" target="_blank" rel="noreferrer">Northlayer</a></p>
 				</div>
 			</div>
 			<MapContainer center={[64.81942, -18.53717]} zoom={6.5} scrollWheelZoom={true} ref={setMap}>
